@@ -23,31 +23,31 @@ document.getElementById('formulario').addEventListener('submit', function (event
 
     if (inputEdad < 18 || inputEdad > 60) {
         alert("La edad debe estar entre 18 y 60 años");
-        valido=false;
+        valido = false;
     }
 
-    if (inputPais==="") {
+    if (inputPais === "") {
         alert("Por favor seleccione un pais");
-        valido=false;
+        valido = false;
     }
 
     if (inputTerminos === false) {
         alert("Debe aceptar los terminos y condiciones");
-        valido=false; 
+        valido = false;
     }
 
 
     if (valido) {
-        const datosUrl= {
+        const datosUrl = {
             nombre: inputNombre,
             email: inputEmail,
             edad: inputEdad,
             pais: inputPais
         };
-    
+
         const parametrosURL = new URLSearchParams(datosUrl).toString();
 
-        window.location.href = "receptor.html?" + parametrosURL;
+        window.location.href = "paginaB.html?" + parametrosURL;
     }
 
 });
